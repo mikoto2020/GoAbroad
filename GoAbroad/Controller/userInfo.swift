@@ -9,13 +9,20 @@
 import Foundation
 
 // BookOne輸入資料
-var userCity = ""
-var userDist = ""
-var userDetailAddr = ""
-var userAirport = ""
-var segmentSelect = ""   //儲存segment選項傳送至firebase
+var orderUserCity = ""
+var orderUserDist = ""
+var orderDetailAddr = ""
+var orderUserAirport = ""
+var orderGoOrBack = ""   //儲存segment選項傳送至firebase
 
 // BookTwo輸入資料
-var boardTime = ""
-var boardDate = ""
-var terminalNum = ""
+var orderBoardTime = ""
+var orderBoardDate = ""
+var orderTerminalNum = ""
+
+//BookThree輸入資料
+var orderAdult = "0"
+var orderChild = "0"
+var orderTotalPessenger = "0"
+var orderLuggage = "0"
+var orderPrice = "0"

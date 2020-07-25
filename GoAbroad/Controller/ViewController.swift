@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cleanBarShadow()
         self.navigationItem.setHidesBackButton(true, animated: true)
+         cleanBarShadow()
     }
 
     @IBAction func mailto(_ sender: UIButton) {
@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     @IBAction func phoneCall(_ sender: UIButton) {
         makeAPhoneCall()
     }
+
+}
+
+extension ViewController {
     func cleanBarShadow() {
         let image = UIImage()
         navigationController?.navigationBar.setBackgroundImage(image, for: .default)
@@ -30,6 +34,7 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK: - Mail compose view Controller Delegate
 extension ViewController: MFMailComposeViewControllerDelegate {
     func sendEmail() {
         let emailTitle = "意見回饋"
@@ -42,7 +47,6 @@ extension ViewController: MFMailComposeViewControllerDelegate {
             mail.setSubject(emailTitle)
             mail.setMessageBody(messageBody, isHTML: false)
             mail.setToRecipients(recipient)
-
             self.present(mail, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "沒有「郵件」APP", message: nil, preferredStyle: .alert)
@@ -54,8 +58,10 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
+    
 }
 
+//MARK: - Phone call
 extension ViewController {
     func makeAPhoneCall() {
         let phoneNumber = "0908028009"
