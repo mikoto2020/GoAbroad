@@ -162,8 +162,4 @@ extension BookOneViewController: UIPickerViewDelegate {
 }
 
 
-var userCity = ""
-var userDist = ""
-var userDetailAddr = ""
-var userAirport = ""
-var segmentSelect: String = ""   //儲存segment選項傳送至firebase
+

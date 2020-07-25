@@ -35,13 +35,15 @@ extension BookTwoViewController {
     func nextBtnLogic() {
         boardTime = timeTxtField.text ?? ""
         boardDate = dateTxtField.text ?? ""
+        print(userCity+userDist+userDetailAddr+userAirport)
+        print(boardDate+boardTime+userAirport+terminalNum)
         if boardTime == "" || boardDate == "" || terminalNum == "請選擇航廈" {
             print("error")
             let alert = UIAlertController(title: "請輸入正確資訊", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         } else {
-            print(userCity+userDist+userDetailAddr+userAirport)
+            
 
             self.performSegue(withIdentifier: "BookTwoToBookThree", sender: self)
         }
@@ -92,8 +94,3 @@ extension BookTwoViewController: UIPickerViewDelegate {
         terminalNum = terminal[row]
     }
 }
-
-
-var boardTime = ""
-var boardDate = ""
-var terminalNum = ""
