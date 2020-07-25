@@ -26,3 +26,8 @@ var orderChild = "0"
 var orderTotalPessenger = "0"
 var orderLuggage = "0"
 var orderPrice = "0"
+
+// UserInfo
+var userName = "王大明"
+var userTel = "0908113111"
+var userMail = "xxxxxxx@gmail.com"

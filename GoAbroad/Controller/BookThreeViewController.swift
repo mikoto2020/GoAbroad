@@ -91,6 +91,7 @@ extension BookThreeViewController {
         orderChild = childNumLabel.text ?? ""
         orderTotalPessenger = totalPersonLabel.text ?? ""
         orderPrice = totalPriceLabel.text ?? ""
+        orderLuggage = luggageNumLabel.text ?? ""
         
         if orderAdult == "0" {
             print("error")
