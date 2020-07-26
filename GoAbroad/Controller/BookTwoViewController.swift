@@ -8,11 +8,12 @@
 
 import UIKit
 
-class BookTwoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
+class BookTwoViewController: UIViewController, UIPickerViewDelegate {
     //UI
-    @IBOutlet weak var dateTxtField: UITextField!
-    @IBOutlet weak var timeTxtField: UITextField!
+    @IBOutlet weak var showSelectedDate: UILabel!
+    @IBOutlet weak var showSelectedTime: UILabel!
     @IBOutlet weak var terminalPickerView: UIPickerView!
+    var dateAndTimepicker = UIDatePicker()
     
     //Action
     @IBAction func nextBtn(_ sender: UIButton) {
@@ -21,23 +22,90 @@ class BookTwoViewController: UIViewController, UITextFieldDelegate, UIPickerView
 
     //Data
     let terminal = ["請選擇航廈","第一航廈","第二航廈"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
-        orderTerminalNum = "請選擇航廈"
+        tapAction()
+        initData()
     }
 }
 
 extension BookTwoViewController {
+    func initData() {
+        orderTerminalNum = "請選擇航廈"
+        showSelectedDate.text = "點擊選擇日期"
+        showSelectedTime.text = "點擊選擇時間"
+    }
     func setupSubviews() {
         terminalPickerView.dataSource = self
         terminalPickerView.delegate = self
-        dateTxtField.delegate = self
-        timeTxtField.delegate = self
     }
 }
 
-//MARK: - Picker view Data Source
+extension BookTwoViewController {
+    func tapAction() {
+        let TapDate: UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(pressedDateLabel)) // 加入觸發條件
+        let TapTime: UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(pressedTimeLabel))
+        showSelectedDate.addGestureRecognizer(TapDate) // 加入觸發動作
+        showSelectedTime.addGestureRecognizer(TapTime) // 加入觸發動作
+    }
+    
+    @objc func pressedDateLabel(){
+        let alert = UIAlertController(title: "\n\n\n\n\n\n", message: "", preferredStyle: .actionSheet)
+        //設定日期選擇器
+        dateAndTimepicker.frame = CGRect(x: 0, y: 0,width: 414, height: 180)
+        dateAndTimepicker.datePickerMode = .date
+        dateAndTimepicker.locale = Locale(identifier:"zh_TW")
+        //設定最小時（72小時後）
+        dateAndTimepicker.minimumDate = Date() + 86400 * 3
+        dateAndTimepicker.maximumDate = Date() + 86400 * 60
+        //加入日期選擇器
+        alert.view.addSubview(self.dateAndTimepicker)
+        //日期格式化
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "yyyy-MM-dd"
+        //加入AlertController按鈕
+        let ok = UIAlertAction(title: "確定", style: .default){(action)in
+            let result = dateformat.string(from: self.dateAndTimepicker.date)
+            self.showSelectedDate.text = result
+        }
+        let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in
+            self.showSelectedDate.text = "點擊選擇日期"
+        }
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func pressedTimeLabel(){
+        let alert = UIAlertController(title: "\n\n\n\n\n\n", message: "", preferredStyle: .actionSheet)
+        //設定時間選擇器
+        dateAndTimepicker.frame = CGRect(x: 0, y: 0,width: 414, height: 180)
+        dateAndTimepicker.datePickerMode = .time
+        dateAndTimepicker.locale = Locale(identifier:"zh_TW")
+        //加入時間選擇器
+        alert.view.addSubview(self.dateAndTimepicker)
+        //日期格式化
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "a hh:mm"
+        dateformat.amSymbol = "上午"
+        dateformat.pmSymbol = "下午"
+        
+        //加入AlertController按鈕
+        let ok = UIAlertAction(title: "確定", style: .default){(action)in
+            let result = dateformat.string(from: self.dateAndTimepicker.date)
+            self.showSelectedTime.text = result
+        }
+        let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in self.showSelectedTime.text = "點擊選擇時間"}
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+
+}
+
+//MARK: - PickerView DataSource
 extension BookTwoViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -55,27 +123,11 @@ extension BookTwoViewController: UIPickerViewDataSource {
     }
 }
 
-//MARK: - Text view Delegate
-extension BookTwoViewController: UITextViewDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()   //點選鍵盤上的rerurn關閉鍵盤
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        timeTxtField.keyboardType = .numbersAndPunctuation
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)  //點選空白處關閉鍵盤
-    }
-}
-
 //MARK: - Next page Button
 extension BookTwoViewController {
     func nextBtnLogic() {
-        orderBoardTime = timeTxtField.text ?? ""
-        orderBoardDate = dateTxtField.text ?? ""
+        orderBoardTime = showSelectedDate.text ?? ""
+        orderBoardDate = showSelectedTime.text ?? ""
         print("搭車日期：\(orderBoardDate)，搭車時間：\(orderBoardTime)，抵達航廈：\(orderTerminalNum)")
         if orderBoardTime == "" || orderBoardDate == "" || orderTerminalNum == "請選擇航廈" {
             let alert = UIAlertController(title: "請輸入正確資訊", message: nil, preferredStyle: .alert)

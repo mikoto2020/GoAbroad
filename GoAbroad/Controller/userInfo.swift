@@ -31,3 +31,19 @@ var orderPrice = "0"
 var userName = "王大明"
 var userTel = "0908113111"
 var userMail = "xxxxxxx@gmail.com"
+
+
+//成立訂單
+struct UserOrderList {
+//    var userName = ""
+//    var userTel = ""
+//    var userEmail = ""
+    var orderBoardTime = ""
+    var orderBoardDate = ""
+    var orderTerminalNum = ""
+}
+
+var userOrederComing = UserOrderList(orderBoardTime: orderBoardTime, orderBoardDate: orderBoardDate, orderTerminalNum: orderTerminalNum)
+//let userOrderLatest = UserOrderList(userName: userName, userTel: userTel, userEmail: userMail)
+var userOderHistory = [UserOrderList]()
+
