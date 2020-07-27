@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookOneViewController: UIViewController, UITextFieldDelegate {
+class BookOneViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource {
     //UI
     @IBOutlet weak var airportPickerView: UIPickerView!
     @IBOutlet weak var addressTxtField: UITextField!
@@ -64,7 +64,7 @@ extension BookOneViewController {
 }
 
 //MARK: - Text view Delegate
-extension BookOneViewController: UITextViewDelegate {
+extension BookOneViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()   //點選鍵盤上的rerurn關閉鍵盤
         return true
@@ -75,7 +75,7 @@ extension BookOneViewController: UITextViewDelegate {
 }
 
 //MARK: - Picker view Data source
-extension BookOneViewController: UIPickerViewDataSource {
+extension BookOneViewController {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerView.tag == 11{
             return 2

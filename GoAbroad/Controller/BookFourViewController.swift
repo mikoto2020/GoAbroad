@@ -23,8 +23,6 @@ class BookFourViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var placeOne: UILabel!
     @IBOutlet weak var placeTwo: UILabel!
-    
-    
 
     //Action
     @IBAction func nextBtn(_ sender: UIButton) {

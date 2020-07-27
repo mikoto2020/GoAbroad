@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D729044524CE6B94006A1A7B /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */; };
+		D729044724CE72D2006A1A7B /* PersonalInfoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */; };
+		D729044924CEBAF4006A1A7B /* HistoryOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */; };
 		D72986B024CD730600454E06 /* CheckOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */; };
 		D72986B424CD9FA200454E06 /* CheckMyOrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */; };
 		D72986B624CDA00600454E06 /* MyOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
+		D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoEditViewController.swift; sourceTree = "<group>"; };
+		D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderTableViewController.swift; sourceTree = "<group>"; };
 		D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOrderListViewController.swift; sourceTree = "<group>"; };
 		D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMyOrderListTableViewController.swift; sourceTree = "<group>"; };
 		D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D729044A24CEBB35006A1A7B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		D7F8206924CB340B00FCB1A5 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 			children = (
 				D7F8208924CB35C300FCB1A5 /* View */,
 				D7F8208A24CB35E400FCB1A5 /* Controller */,
+				D729044A24CEBB35006A1A7B /* Data */,
 				D7F8207524CB340C00FCB1A5 /* AppDelegate.swift */,
 				D7F8207724CB340C00FCB1A5 /* SceneDelegate.swift */,
 				D7F8207E24CB340E00FCB1A5 /* Assets.xcassets */,
@@ -106,6 +120,9 @@
 				D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */,
 				D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */,
 				D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */,
+				D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */,
+				D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */,
+				D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,9 +202,12 @@
 				D75606B724CCA0AD007D400D /* FinalViewController.swift in Sources */,
 				D7F8207A24CB340C00FCB1A5 /* ViewController.swift in Sources */,
 				D7F8207624CB340C00FCB1A5 /* AppDelegate.swift in Sources */,
+				D729044524CE6B94006A1A7B /* PersonalInfoTableViewController.swift in Sources */,
 				D7F8209024CB4D7600FCB1A5 /* BookTwoViewController.swift in Sources */,
 				D7F8208C24CB38C400FCB1A5 /* BookOneViewController.swift in Sources */,
+				D729044924CEBAF4006A1A7B /* HistoryOrderTableViewController.swift in Sources */,
 				D72986B624CDA00600454E06 /* MyOrderDetailViewController.swift in Sources */,
+				D729044724CE72D2006A1A7B /* PersonalInfoEditViewController.swift in Sources */,
 				D75606B524CC8F15007D400D /* BookFourViewController.swift in Sources */,
 				D72986B424CD9FA200454E06 /* CheckMyOrderListTableViewController.swift in Sources */,
 				D7F8207824CB340C00FCB1A5 /* SceneDelegate.swift in Sources */,
@@ -339,6 +359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GWK55W89L9;
 				INFOPLIST_FILE = GoAbroad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +378,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GWK55W89L9;
 				INFOPLIST_FILE = GoAbroad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

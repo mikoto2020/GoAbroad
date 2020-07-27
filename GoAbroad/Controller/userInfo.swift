@@ -28,9 +28,9 @@ var orderLuggage = "0"
 var orderPrice = "0"
 
 // UserInfo
-var userName = "王大明"
-var userTel = "0908113111"
-var userMail = "xxxxxxx@gmail.com"
+var userName = "金城武"
+var userTel = "09XX123456"
+var userMail = "xxxxxx@gmail.com"
 
 
 //成立訂單
@@ -45,5 +45,5 @@ struct UserOrderList {
 
 var userOrederComing = UserOrderList(orderBoardTime: orderBoardTime, orderBoardDate: orderBoardDate, orderTerminalNum: orderTerminalNum)
 //let userOrderLatest = UserOrderList(userName: userName, userTel: userTel, userEmail: userMail)
-var userOderHistory = [UserOrderList]()
+// userOderHistory = [UserOrderList]()
 

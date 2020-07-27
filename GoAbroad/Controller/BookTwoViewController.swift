@@ -57,8 +57,9 @@ extension BookTwoViewController {
         dateAndTimepicker.frame = CGRect(x: 0, y: 0,width: 414, height: 180)
         dateAndTimepicker.datePickerMode = .date
         dateAndTimepicker.locale = Locale(identifier:"zh_TW")
-        //設定最小時（72小時後）
+        //設定最短三天後（72小時後）
         dateAndTimepicker.minimumDate = Date() + 86400 * 3
+        //設定60天內
         dateAndTimepicker.maximumDate = Date() + 86400 * 60
         //加入日期選擇器
         alert.view.addSubview(self.dateAndTimepicker)
@@ -126,8 +127,8 @@ extension BookTwoViewController: UIPickerViewDataSource {
 //MARK: - Next page Button
 extension BookTwoViewController {
     func nextBtnLogic() {
-        orderBoardTime = showSelectedDate.text ?? ""
-        orderBoardDate = showSelectedTime.text ?? ""
+        orderBoardDate = showSelectedDate.text ?? ""
+        orderBoardTime = showSelectedTime.text ?? ""
         print("搭車日期：\(orderBoardDate)，搭車時間：\(orderBoardTime)，抵達航廈：\(orderTerminalNum)")
         if orderBoardTime == "" || orderBoardDate == "" || orderTerminalNum == "請選擇航廈" {
             let alert = UIAlertController(title: "請輸入正確資訊", message: nil, preferredStyle: .alert)

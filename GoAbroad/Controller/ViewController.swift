@@ -23,11 +23,10 @@ class ViewController: UIViewController {
     @IBAction func phoneCall(_ sender: UIButton) {
         makeAPhoneCall()
     }
-
 }
 
 extension ViewController {
-    func cleanBarShadow() {
+    func cleanBarShadow() {  //清除Navigator Bar的陰影
         let image = UIImage()
         navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         navigationController?.navigationBar.shadowImage = image
