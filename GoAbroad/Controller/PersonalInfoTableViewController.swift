@@ -19,8 +19,11 @@ class PersonalInfoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         if let userName = UserDefaults.standard.object(forKey: "userName") as? String {
