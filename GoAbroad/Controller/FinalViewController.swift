@@ -16,12 +16,13 @@ class FinalViewController: UIViewController {
     @IBAction func backToTopBtn(_ sender: UIButton) {
         nextBtnLogic()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmLabel.text = "訂單正在確認中"
         waitingIndicator.startAnimating()
         confirmDetailLabel.text = ""
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,9 +31,6 @@ class FinalViewController: UIViewController {
         waitingIndicator.stopAnimating()
         confirmDetailLabel.text = "火速為您派車中，感謝您的使用"
     }
-    
-    
-    
 }
 
 //MARK: - Next page Button
@@ -41,3 +39,4 @@ extension FinalViewController {
         self.performSegue(withIdentifier: "finalBackToTop", sender: self)
     }
 }
+

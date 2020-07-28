@@ -19,22 +19,24 @@ class PersonalInfoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        personalMail.text = userMail
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        personalName.text = userName
-        personalPhoneNum.text = userTel
+        if let userName = UserDefaults.standard.object(forKey: "userName") as? String {
+            personalName.text = userName
+        }
+        if let userTel = UserDefaults.standard.object(forKey: "userTel") as? String {
+            personalPhoneNum.text = userTel
+        }
     }
 
     // MARK: - TableView DataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 5
     }
 }

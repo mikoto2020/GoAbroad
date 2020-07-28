@@ -69,7 +69,7 @@ extension BookTwoViewController {
         //加入AlertController按鈕
         let ok = UIAlertAction(title: "確定", style: .default){(action)in
             let result = dateformat.string(from: self.dateAndTimepicker.date)
-            self.showSelectedDate.text = result
+            self.showSelectedDate.text = result //將用戶選擇結果輸入至label
         }
         let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in
             self.showSelectedDate.text = "點擊選擇日期"
@@ -92,12 +92,13 @@ extension BookTwoViewController {
         dateformat.dateFormat = "a hh:mm"
         dateformat.amSymbol = "上午"
         dateformat.pmSymbol = "下午"
-        
         //加入AlertController按鈕
         let ok = UIAlertAction(title: "確定", style: .default){(action)in
+
             let result = dateformat.string(from: self.dateAndTimepicker.date)
-            self.showSelectedTime.text = result
+            self.showSelectedTime.text = result   //將用戶選擇結果輸入至label
         }
+        
         let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in self.showSelectedTime.text = "點擊選擇時間"}
         alert.addAction(ok)
         alert.addAction(cancel)

@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryOrderTableViewController: UITableViewController {
     //Data
-    var userOderHistory = [UserOrderList]()
+    //var userOderHistory = [UserOrderList]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

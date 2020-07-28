@@ -60,9 +60,12 @@ extension PersonalInfoEditViewController {
             present(alert, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "個人資料修改成功", message: "", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "確定", style: .default, handler: nil)
+            let ok = UIAlertAction(title: "確定", style: .default) { (action) in self.navigationController?.popViewController(animated: true)}  //點擊確定後跳回上一頁
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
         }
+        //儲存用戶的個人資料
+        UserDefaults.standard.set(userName, forKey: "userName")
+        UserDefaults.standard.set(userTel, forKey: "userTel")
     }
 }

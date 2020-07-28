@@ -36,8 +36,12 @@ class BookFourViewController: UIViewController {
 }
 extension BookFourViewController {
     func initData() {
-        userNameLabel.text = userName
-        userTelLabel.text = userTel
+        if let name = UserDefaults.standard.object(forKey: "name") as? String {
+            userNameLabel.text = name
+        }
+        if let phone = UserDefaults.standard.object(forKey: "phone") as? String {
+            userTelLabel.text = phone
+        }
         userMailLabel.text = userMail
         
         dateLabel.text = orderBoardDate
@@ -49,7 +53,6 @@ extension BookFourViewController {
         totalManLabel.text = orderTotalPessenger
         luggageLabel.text = orderLuggage
         totalPriceLabel.text = orderPrice
-        
 
         if orderGoOrBack == "接機" {
             placeOne.text = "下車地點"
@@ -61,6 +64,7 @@ extension BookFourViewController {
 //MARK: - Next page Button
 extension BookFourViewController {
     func nextBtnLogic() {
-        self.performSegue(withIdentifier: "BookFourToFinal", sender: self)
+        //self.performSegue(withIdentifier: "BookFourToFinal", sender: self)
+        self.navigationController?.popViewController(animated: true)
     }
 }

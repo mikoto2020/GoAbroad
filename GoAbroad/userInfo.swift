@@ -27,23 +27,14 @@ var orderTotalPessenger = "0"
 var orderLuggage = "0"
 var orderPrice = "0"
 
+//Book Final
+var orderNum = 1
+
 // UserInfo
-var userName = "金城武"
-var userTel = "09XX123456"
-var userMail = "xxxxxx@gmail.com"
+var userName = ""
+var userTel = ""
+var userMail = ""
 
-
-//成立訂單
-struct UserOrderList {
-//    var userName = ""
-//    var userTel = ""
-//    var userEmail = ""
-    var orderBoardTime = ""
-    var orderBoardDate = ""
-    var orderTerminalNum = ""
+struct userOrder {
+    
 }
-
-var userOrederComing = UserOrderList(orderBoardTime: orderBoardTime, orderBoardDate: orderBoardDate, orderTerminalNum: orderTerminalNum)
-//let userOrderLatest = UserOrderList(userName: userName, userTel: userTel, userEmail: userMail)
-// userOderHistory = [UserOrderList]()
-
