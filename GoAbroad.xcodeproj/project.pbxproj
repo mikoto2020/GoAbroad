@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E690A8382CC163745FF5BAA /* Pods_GoAbroad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB317B443C30DD9E2EC3888 /* Pods_GoAbroad.framework */; };
 		D729044524CE6B94006A1A7B /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */; };
 		D729044724CE72D2006A1A7B /* PersonalInfoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */; };
 		D729044924CEBAF4006A1A7B /* HistoryOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */; };
@@ -20,9 +21,13 @@
 		D72904E724D07DE2006A1A7B /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72904E624D07DE2006A1A7B /* FaqViewController.swift */; };
 		D729050924D16E93006A1A7B /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729050824D16E93006A1A7B /* UserOrder.swift */; };
 		D729050B24D1756A006A1A7B /* UserOrderDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729050A24D1756A006A1A7B /* UserOrderDAO.swift */; };
+		D729050D24D19C23006A1A7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D729050C24D19C23006A1A7B /* GoogleService-Info.plist */; };
 		D72986B024CD730600454E06 /* CheckOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */; };
 		D72986B424CD9FA200454E06 /* CheckMyOrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */; };
 		D72986B624CDA00600454E06 /* MyOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */; };
+		D72E421524D1BDED0049F4F6 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421424D1BDED0049F4F6 /* RegisterPageViewController.swift */; };
+		D72E421724D1BE070049F4F6 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */; };
+		D72E421924D1D7470049F4F6 /* RegisterPageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */; };
 		D75606B524CC8F15007D400D /* BookFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75606B424CC8F15007D400D /* BookFourViewController.swift */; };
 		D75606B724CCA0AD007D400D /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75606B624CCA0AD007D400D /* FinalViewController.swift */; };
 		D7BA417A24CBE99800D90314 /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA417924CBE99800D90314 /* userInfo.swift */; };
@@ -38,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DA1092AB166A1BCB6BE697C /* Pods-GoAbroad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoAbroad.debug.xcconfig"; path = "Target Support Files/Pods-GoAbroad/Pods-GoAbroad.debug.xcconfig"; sourceTree = "<group>"; };
+		CBDC0F81E13AB0B7AE1F4DE2 /* Pods-GoAbroad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoAbroad.release.xcconfig"; path = "Target Support Files/Pods-GoAbroad/Pods-GoAbroad.release.xcconfig"; sourceTree = "<group>"; };
 		D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
 		D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoEditViewController.swift; sourceTree = "<group>"; };
 		D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderTableViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +65,13 @@
 		D72904E624D07DE2006A1A7B /* FaqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		D729050824D16E93006A1A7B /* UserOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
 		D729050A24D1756A006A1A7B /* UserOrderDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrderDAO.swift; sourceTree = "<group>"; };
+		D729050C24D19C23006A1A7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOrderListViewController.swift; sourceTree = "<group>"; };
 		D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMyOrderListTableViewController.swift; sourceTree = "<group>"; };
 		D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailViewController.swift; sourceTree = "<group>"; };
+		D72E421424D1BDED0049F4F6 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageTwoViewController.swift; sourceTree = "<group>"; };
 		D75606B424CC8F15007D400D /* BookFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFourViewController.swift; sourceTree = "<group>"; };
 		D75606B624CCA0AD007D400D /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		D7BA417924CBE99800D90314 /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
@@ -75,6 +86,7 @@
 		D7F8208324CB340E00FCB1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7F8208B24CB38C400FCB1A5 /* BookOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOneViewController.swift; sourceTree = "<group>"; };
 		D7F8208F24CB4D7600FCB1A5 /* BookTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTwoViewController.swift; sourceTree = "<group>"; };
+		FBB317B443C30DD9E2EC3888 /* Pods_GoAbroad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoAbroad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +95,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D729046924D01C8C006A1A7B /* libsqlite3.tbd in Frameworks */,
+				8E690A8382CC163745FF5BAA /* Pods_GoAbroad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC641B5973D09F18901059FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1092AB166A1BCB6BE697C /* Pods-GoAbroad.debug.xcconfig */,
+				CBDC0F81E13AB0B7AE1F4DE2 /* Pods-GoAbroad.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D729046324D007CF006A1A7B /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D729046824D01C7D006A1A7B /* libsqlite3.tbd */,
+				FBB317B443C30DD9E2EC3888 /* Pods_GoAbroad.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,6 +162,7 @@
 				D7F8207424CB340C00FCB1A5 /* GoAbroad */,
 				D7F8207324CB340C00FCB1A5 /* Products */,
 				D729046724D01C7D006A1A7B /* Frameworks */,
+				AC641B5973D09F18901059FF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +189,7 @@
 				D7F8208024CB340E00FCB1A5 /* LaunchScreen.storyboard */,
 				D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */,
 				D7F8208324CB340E00FCB1A5 /* Info.plist */,
+				D729050C24D19C23006A1A7B /* GoogleService-Info.plist */,
 			);
 			path = GoAbroad;
 			sourceTree = "<group>";
@@ -192,6 +217,9 @@
 				D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */,
 				D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */,
 				D72904E624D07DE2006A1A7B /* FaqViewController.swift */,
+				D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */,
+				D72E421424D1BDED0049F4F6 /* RegisterPageViewController.swift */,
+				D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7F8208624CB340E00FCB1A5 /* Build configuration list for PBXNativeTarget "GoAbroad" */;
 			buildPhases = (
+				A90B5D6033A09616903A2882 /* [CP] Check Pods Manifest.lock */,
 				D7F8206E24CB340C00FCB1A5 /* Sources */,
 				D7F8206F24CB340C00FCB1A5 /* Frameworks */,
 				D7F8207024CB340C00FCB1A5 /* Resources */,
+				A3DCBA12F94C7AD9349EB18D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,12 +287,55 @@
 			files = (
 				D7F8208224CB340E00FCB1A5 /* LaunchScreen.storyboard in Resources */,
 				D7F8207F24CB340E00FCB1A5 /* Assets.xcassets in Resources */,
+				D729050D24D19C23006A1A7B /* GoogleService-Info.plist in Resources */,
 				D7F8207D24CB340C00FCB1A5 /* Main.storyboard in Resources */,
 				D729047F24D02417006A1A7B /* GoAbroadDataBase.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3DCBA12F94C7AD9349EB18D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoAbroad/Pods-GoAbroad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoAbroad/Pods-GoAbroad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoAbroad/Pods-GoAbroad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A90B5D6033A09616903A2882 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoAbroad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7F8206E24CB340C00FCB1A5 /* Sources */ = {
@@ -277,7 +350,9 @@
 				D7F8207624CB340C00FCB1A5 /* AppDelegate.swift in Sources */,
 				D729047A24D023BE006A1A7B /* FMDatabaseAdditions.m in Sources */,
 				D729044524CE6B94006A1A7B /* PersonalInfoTableViewController.swift in Sources */,
+				D72E421724D1BE070049F4F6 /* LoginPageViewController.swift in Sources */,
 				D7F8209024CB4D7600FCB1A5 /* BookTwoViewController.swift in Sources */,
+				D72E421524D1BDED0049F4F6 /* RegisterPageViewController.swift in Sources */,
 				D7F8208C24CB38C400FCB1A5 /* BookOneViewController.swift in Sources */,
 				D729044924CEBAF4006A1A7B /* HistoryOrderTableViewController.swift in Sources */,
 				D729050924D16E93006A1A7B /* UserOrder.swift in Sources */,
@@ -292,6 +367,7 @@
 				D72986B024CD730600454E06 /* CheckOrderListViewController.swift in Sources */,
 				D7BA417C24CBED8100D90314 /* BookThreeViewController.swift in Sources */,
 				D72904E724D07DE2006A1A7B /* FaqViewController.swift in Sources */,
+				D72E421924D1D7470049F4F6 /* RegisterPageTwoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +509,7 @@
 		};
 		D7F8208724CB340E00FCB1A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA1092AB166A1BCB6BE697C /* Pods-GoAbroad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -455,6 +532,7 @@
 		};
 		D7F8208824CB340E00FCB1A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDC0F81E13AB0B7AE1F4DE2 /* Pods-GoAbroad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

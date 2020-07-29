@@ -60,7 +60,7 @@ extension PersonalInfoEditViewController {
             userName = nameInputTxtField.text ?? ""
             userTel = phoneNumInputTxtField.text ?? ""
             let alert = UIAlertController(title: "個人資料修改成功", message: nil, preferredStyle: .alert)
-            let ok = UIAlertAction(title: "確定", style: .default) { (action) in self.navigationController?.popViewController(animated: true)}  //點擊確定後跳回上一頁
+            let ok = UIAlertAction(title: "確定", style: .default) {(action) in self.navigationController?.popViewController(animated: true)}  //點擊確定後跳回上一頁
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
         }
