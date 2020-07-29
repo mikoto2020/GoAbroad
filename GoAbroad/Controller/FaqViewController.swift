@@ -32,7 +32,7 @@ class FaqViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func initData() {
         tableViewData = [
             faqData(isOpen: false, sectionTitle: "＊如何預約機場接送？", sectionData:[ "請點選「預約接送」，填寫相關資料後送出即完成預定。"]),
-            faqData(isOpen: false, sectionTitle: "＊需要提前多久預約 ?", sectionData:[ "最短搭車日72小時前皆可預約。"]),
+            faqData(isOpen: false, sectionTitle: "＊需要提前多久預約 ?", sectionData:[ "因機場接送採預約制，需要提前為您安排合適車輛與駕駛。最短搭車日72小時前 皆可預約。"]),
             faqData(isOpen: false, sectionTitle: "＊如何付款", sectionData:[ "目前僅提供現場付款方式，後續將會開放信用卡付款。"]),
             faqData(isOpen: false, sectionTitle: "＊可以接送的地區？", sectionData:[ "目前僅提供北北基地區叫車。"]),
             faqData(isOpen: false, sectionTitle: "＊有兒童安全座椅嗎？", sectionData:[ "有的。"])

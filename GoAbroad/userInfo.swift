@@ -35,6 +35,4 @@ var userName = ""
 var userTel = ""
 var userMail = ""
 
-struct userOrder {
-    
-}
+
