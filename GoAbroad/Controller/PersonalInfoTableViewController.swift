@@ -19,9 +19,10 @@ class PersonalInfoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+
     
+    //從Userdefault中取出，並顯示修改頁面內輸入的資料
     override func viewWillAppear(_ animated: Bool) {
         if let userName = UserDefaults.standard.object(forKey: "userName") as? String {
             personalName.text = userName

@@ -50,21 +50,21 @@ extension PersonalInfoEditViewController: UITextViewDelegate {
 //MARK: - 資料送出時的錯誤判斷
 extension PersonalInfoEditViewController {
     func subminBtnAction() {
-        userName = nameInputTxtField.text ?? ""
-        userTel = phoneNumInputTxtField.text ?? ""
-        //print("修改姓名：\(userName), 修改電話：\(userTel)")
+        //檢查欄位是否有留空
         if nameInputTxtField.text == "" || phoneNumInputTxtField.text == "" {
-            let alert = UIAlertController(title: "欄位不得為空", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "欄位不得為空", message: nil, preferredStyle: .alert)
             let ok = UIAlertAction(title: "確定", style: .default, handler: nil)
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "個人資料修改成功", message: "", preferredStyle: .alert)
+            userName = nameInputTxtField.text ?? ""
+            userTel = phoneNumInputTxtField.text ?? ""
+            let alert = UIAlertController(title: "個人資料修改成功", message: nil, preferredStyle: .alert)
             let ok = UIAlertAction(title: "確定", style: .default) { (action) in self.navigationController?.popViewController(animated: true)}  //點擊確定後跳回上一頁
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
         }
-        //儲存用戶的個人資料
+        //儲存用戶的個人資料於本地端
         UserDefaults.standard.set(userName, forKey: "userName")
         UserDefaults.standard.set(userTel, forKey: "userTel")
     }
