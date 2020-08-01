@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MyOrderDetailViewController: UIViewController {
     @IBOutlet weak var showOrderView: UIView!
@@ -15,34 +16,50 @@ class MyOrderDetailViewController: UIViewController {
     @IBOutlet weak var cityShowLabel: UILabel!
     @IBOutlet weak var addressShowLabel: UILabel!
     @IBOutlet weak var airportShowLabel: UILabel!
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSubviews()
+        if let tt = UserDefaults.standard.object(forKey: "userTel") as? String {
+            userTel = tt
+        }
+        self.showOrderView.isHidden = true
+        print(hasOrder)
+        getOrder()
     }
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension MyOrderDetailViewController {
-    func setupSubviews() {
-        showboardDateLabel.text = orderBoardDate
-        showSetOffTimeLabel.text = orderBoardTime
-        cityShowLabel.text = orderUserCity + orderUserDist
-        addressShowLabel.text = orderDetailAddr
-        airportShowLabel.text = orderUserAirport
-        showOrderView.isHidden = true
+    func getOrder() {
+        print(hasOrder)
+        //判斷是否有訂單
+        if hasOrder == false {
+            print("NO!")
+        } else {
+            db.collection("GoAbroad").document(userMail).collection("order").order(by: "orderBoardDate", descending: true).getDocuments{ (querySnapshot, error) in
+                
+                if let querySnapshot = querySnapshot {
+                    
+                    print("拿firebase的訂單")
+                    print(querySnapshot.documents[0].data())
+                    
+                    let orderBoardDate = querySnapshot.documents[0].data()["orderBoardDate"] as? String
+                    let orderBoardTime = querySnapshot.documents[0].data()["orderBoardTime"] as? String
+                    let orderUserCity = querySnapshot.documents[0].data()["orderUserCity"] as? String
+                    let orderUserDist = querySnapshot.documents[0].data()["orderUserDist"] as? String
+                    let orderDetailAddr = querySnapshot.documents[0].data()["orderDetailAddr"] as? String
+                    let orderUserAirport = querySnapshot.documents[0].data()["orderUserAirport"] as? String
+                    let orderTerminalNum = querySnapshot.documents[0].data()["orderTerminalNum"] as? String
+                    
+                    self.showboardDateLabel.text = orderBoardDate
+                    self.showSetOffTimeLabel.text = orderBoardTime
+                    self.cityShowLabel.text = orderUserCity! + orderUserDist!
+                    self.addressShowLabel.text = orderDetailAddr
+                    self.airportShowLabel.text = orderUserAirport! + orderTerminalNum!
+                    self.showOrderView.isHidden = false
+                }
+            }
+        }
     }
 }
 

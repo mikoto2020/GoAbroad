@@ -45,8 +45,10 @@ extension RegisterPageTwoViewController {
             present(alert, animated: true, completion: nil)
         } else {
             self.performSegue(withIdentifier: "toTopPage", sender: self)
-            userName = registerNameTxtField.text!
-            userTel = registerPhoneTxtField.text!
+            userName = self.registerNameTxtField.text!
+            UserDefaults.standard.set(userName, forKey: "userName")
+            userTel = self.registerPhoneTxtField.text!
+            UserDefaults.standard.set(userTel, forKey: "userTel")
         }
     }
 }

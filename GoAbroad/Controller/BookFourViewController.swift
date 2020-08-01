@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class BookFourViewController: UIViewController {
     //UI
     @IBOutlet weak var userNameLabel: UILabel!
@@ -32,18 +33,24 @@ class BookFourViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initData()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let userName = UserDefaults.standard.object(forKey: "userName") as? String {
+            userNameLabel.text = userName
+        }
+        if let userTel = UserDefaults.standard.object(forKey: "userTel") as? String {
+            userTelLabel.text = userTel
+        }
+        if let userMail = UserDefaults.standard.object(forKey: "userMail") as? String {
+            userMailLabel.text = userMail
+        }
     }
 }
+
 extension BookFourViewController {
     func initData() {
-        if let name = UserDefaults.standard.object(forKey: "name") as? String {
-            userNameLabel.text = name
-        }
-        if let phone = UserDefaults.standard.object(forKey: "phone") as? String {
-            userTelLabel.text = phone
-        }
-        userMailLabel.text = userMail
-        
         dateLabel.text = orderBoardDate
         timeLabel.text = orderBoardTime
         cityLabel.text = orderUserCity + orderUserDist
@@ -64,7 +71,8 @@ extension BookFourViewController {
 //MARK: - Next page Button
 extension BookFourViewController {
     func nextBtnLogic() {
-        //self.performSegue(withIdentifier: "BookFourToFinal", sender: self)
-        self.navigationController?.popViewController(animated: true)
+        self.performSegue(withIdentifier: "BookFourToFinal", sender: self)
+        //self.navigationController?.popViewController(animated: true)
     }
+    
 }

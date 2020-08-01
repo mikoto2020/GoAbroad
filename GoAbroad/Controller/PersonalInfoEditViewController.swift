@@ -22,7 +22,9 @@ class PersonalInfoEditViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
-        showEmailLabel.text = userMail
+        if let userMail = UserDefaults.standard.object(forKey: "userMail") as? String {
+            showEmailLabel.text = userMail
+        }
     }
 }
 
@@ -63,9 +65,9 @@ extension PersonalInfoEditViewController {
             let ok = UIAlertAction(title: "確定", style: .default) {(action) in self.navigationController?.popViewController(animated: true)}  //點擊確定後跳回上一頁
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
+            //儲存用戶的個人資料於本地端
+            UserDefaults.standard.set(userName, forKey: "userName")
+            UserDefaults.standard.set(userTel, forKey: "userTel")
         }
-        //儲存用戶的個人資料於本地端
-        UserDefaults.standard.set(userName, forKey: "userName")
-        UserDefaults.standard.set(userTel, forKey: "userTel")
     }
 }

@@ -28,6 +28,7 @@ class BookOneViewController: UIViewController, UITextFieldDelegate, UIPickerView
     
     @IBAction func nextBtn(_ sender: UIButton) {
         nextBtnLogic()
+        print("page2")
     }
 
     //Data
@@ -63,7 +64,7 @@ extension BookOneViewController {
 
 }
 
-//MARK: - Text view Delegate
+//MARK: - keyboard
 extension BookOneViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()   //點選鍵盤上的rerurn關閉鍵盤

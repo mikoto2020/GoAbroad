@@ -15,11 +15,10 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var regisMailTxtField: UITextField!
     @IBOutlet weak var regisPassTxtField: UITextField!
 
-    
+    //Action
     @IBAction func checkRegisterBtn(_ sender: UIButton) {
         checkRegister()
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +41,7 @@ extension RegisterPageViewController {
     func checkRegister() {
         Auth.auth().createUser(withEmail: regisMailTxtField.text!, password: regisPassTxtField.text!) { (user, error) in
             if error != nil {
-                let alert = UIAlertController(title: "欄位不得為空", message: error?.localizedDescription, preferredStyle: .alert)
+                let alert = UIAlertController(title: "註冊失敗", message: error?.localizedDescription, preferredStyle: .alert)
                 let ok = UIAlertAction(title: "確定", style: .default, handler: nil)
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
@@ -50,6 +49,9 @@ extension RegisterPageViewController {
                 self.performSegue(withIdentifier: "registerToRegisterInfo", sender: self)
                 userMail = self.regisMailTxtField.text!
                 UserDefaults.standard.set(userMail, forKey: "userMail")
+                //註冊成功後，先在firebase中加入沒有訂單的判斷
+                let db = Firestore.firestore()
+                db.collection("GoAbroad").document(self.regisMailTxtField.text!).setData(["hasOrder" : false])
             }
         }
     }

@@ -8,24 +8,25 @@
 
 import Foundation
 
-struct userOrder {
+struct UserOrder {
     var fid = 0
-    var odrName = ""  //姓名
-    var odrTel = ""  //電話
-    var odrMail = ""  //信箱
-    var odrCity = ""  //縣市
-    var odrDist = ""  //鄉鎮市區
-    var odrDetailAddr = ""  //詳細地址
-    var odrBoardDate = "" //乘車日期
-    var odrBoardTime = "" //乘車時間
-    var odrGoOrBack = ""  //接機或送機
-    var odrAirport = ""  //機場
-    var odrTerminal = "" //航廈
-    var odrAdult = 0
-    var odrChild = 0
-    var totalPerson = 0  //總人數
-    var odrLuggage = 0 //行李數
-    var totalPrice = 0  //總金額
+    var orderday = DateFormatter.localizedString(from: Date(), dateStyle: .long, timeStyle: .long)
+    var name = userName
+    var phone = userTel
+    var email = userMail
+    var city = orderUserCity
+    var district = orderUserDist
+    var address = orderDetailAddr
+    var date = orderBoardDate
+    var time = orderBoardTime
+    var goorback = orderGoOrBack
+    var airport = orderUserAirport
+    var terminal = orderTerminalNum
+    var adult = orderAdult
+    var child = orderChild
+    var totalperson = orderTotalPessenger
+    var luggage = orderLuggage
+    var totalprice = orderPrice
 }
 
 

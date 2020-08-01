@@ -11,7 +11,8 @@ import Firebase
 import FirebaseAuth
 
 class LoginPageViewController: UIViewController, UITextFieldDelegate {
-
+    //UI
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var loginIdTxtField: UITextField!
     @IBOutlet weak var loginPassTxtField: UITextField!
     
@@ -21,12 +22,18 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginBtn(_ sender: UIButton) {
         login()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         loginPassTxtField.delegate = self
         loginIdTxtField.delegate = self
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        loading.startAnimating()
+        autoLogin()
+        loading.stopAnimating()
     }
 }
 
@@ -49,8 +56,25 @@ extension LoginPageViewController {
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
             } else {
+                UserDefaults.standard.set(self.loginIdTxtField.text!, forKey: "userMail")
+                UserDefaults.standard.set(self.loginPassTxtField.text!, forKey: "userPass")
                 self.performSegue(withIdentifier: "loginToTopPage", sender: self)
             }
+        }
+    }
+    
+    func autoLogin() {
+        if let tt = UserDefaults.standard.object(forKey: "userPass") as? String {
+            userPass = tt
+        }
+        if let tt = UserDefaults.standard.object(forKey: "userMail") as? String {
+            userMail = tt
+        }
+        if userMail != "" {
+            sleep(1)
+            loginIdTxtField.text = userMail
+            loginPassTxtField.text = userPass
+            login()
         }
     }
     

@@ -35,4 +35,9 @@ var userName = ""
 var userTel = ""
 var userMail = ""
 
+// Auto Login
+var userPass = ""
+
+// hasOrder
+var hasOrder = false
 

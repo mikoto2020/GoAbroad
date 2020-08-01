@@ -28,6 +28,7 @@ class BookTwoViewController: UIViewController, UIPickerViewDelegate {
         setupSubviews()
         tapAction()
         initData()
+        print("page3")
     }
 }
 
@@ -52,7 +53,7 @@ extension BookTwoViewController {
     }
     
     @objc func pressedDateLabel(){
-        let alert = UIAlertController(title: "\n\n\n\n\n\n", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "\n\n\n\n\n\n\n", message: "", preferredStyle: .actionSheet)
         //設定日期選擇器
         dateAndTimepicker.frame = CGRect(x: 0, y: 0,width: 414, height: 180)
         dateAndTimepicker.datePickerMode = .date
@@ -71,6 +72,7 @@ extension BookTwoViewController {
             let result = dateformat.string(from: self.dateAndTimepicker.date)
             self.showSelectedDate.text = result //將用戶選擇結果輸入至label
         }
+        //點取消畫面跳回點擊選擇日期
         let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in
             self.showSelectedDate.text = "點擊選擇日期"
         }
@@ -80,7 +82,7 @@ extension BookTwoViewController {
     }
     
     @objc func pressedTimeLabel(){
-        let alert = UIAlertController(title: "\n\n\n\n\n\n", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "\n\n\n\n\n\n\n", message: "", preferredStyle: .actionSheet)
         //設定時間選擇器
         dateAndTimepicker.frame = CGRect(x: 0, y: 0,width: 414, height: 180)
         dateAndTimepicker.datePickerMode = .time
@@ -98,7 +100,7 @@ extension BookTwoViewController {
             let result = dateformat.string(from: self.dateAndTimepicker.date)
             self.showSelectedTime.text = result   //將用戶選擇結果輸入至label
         }
-        
+        //點取消畫面跳回點擊選擇時間
         let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in self.showSelectedTime.text = "點擊選擇時間"}
         alert.addAction(ok)
         alert.addAction(cancel)
@@ -128,14 +130,14 @@ extension BookTwoViewController: UIPickerViewDataSource {
 //MARK: - Next page Button
 extension BookTwoViewController {
     func nextBtnLogic() {
-        orderBoardDate = showSelectedDate.text ?? ""
-        orderBoardTime = showSelectedTime.text ?? ""
-        print("搭車日期：\(orderBoardDate)，搭車時間：\(orderBoardTime)，抵達航廈：\(orderTerminalNum)")
-        if orderBoardTime == "" || orderBoardDate == "" || orderTerminalNum == "請選擇航廈" {
+        if orderBoardTime == "點擊選擇時間" || orderBoardDate == "點擊選擇日期" || orderTerminalNum == "請選擇航廈" {
             let alert = UIAlertController(title: "請輸入正確資訊", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "確定", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         } else {
+            orderBoardDate = showSelectedDate.text ?? ""
+            orderBoardTime = showSelectedTime.text ?? ""
+            print("搭車日期：\(orderBoardDate)，搭車時間：\(orderBoardTime)，抵達航廈：\(orderTerminalNum)")
             self.performSegue(withIdentifier: "BookTwoToBookThree", sender: self)
         }
     }

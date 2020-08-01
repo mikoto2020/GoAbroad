@@ -17,17 +17,17 @@
 		D729047B24D023BE006A1A7B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D729047224D023BE006A1A7B /* FMDatabase.m */; };
 		D729047C24D023BE006A1A7B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D729047424D023BE006A1A7B /* FMDatabasePool.m */; };
 		D729047D24D023BE006A1A7B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D729047724D023BE006A1A7B /* FMResultSet.m */; };
-		D729047F24D02417006A1A7B /* GoAbroadDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = D729047E24D02417006A1A7B /* GoAbroadDataBase.db */; };
 		D72904E724D07DE2006A1A7B /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72904E624D07DE2006A1A7B /* FaqViewController.swift */; };
 		D729050924D16E93006A1A7B /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729050824D16E93006A1A7B /* UserOrder.swift */; };
 		D729050B24D1756A006A1A7B /* UserOrderDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729050A24D1756A006A1A7B /* UserOrderDAO.swift */; };
-		D729050D24D19C23006A1A7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D729050C24D19C23006A1A7B /* GoogleService-Info.plist */; };
 		D72986B024CD730600454E06 /* CheckOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */; };
 		D72986B424CD9FA200454E06 /* CheckMyOrderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */; };
 		D72986B624CDA00600454E06 /* MyOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */; };
 		D72E421524D1BDED0049F4F6 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421424D1BDED0049F4F6 /* RegisterPageViewController.swift */; };
 		D72E421724D1BE070049F4F6 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */; };
 		D72E421924D1D7470049F4F6 /* RegisterPageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */; };
+		D72E421B24D29FD50049F4F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D72E421A24D29FD50049F4F6 /* GoogleService-Info.plist */; };
+		D72E421F24D407490049F4F6 /* GoAbroadDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = D72E421E24D407490049F4F6 /* GoAbroadDataBase.db */; };
 		D75606B524CC8F15007D400D /* BookFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75606B424CC8F15007D400D /* BookFourViewController.swift */; };
 		D75606B724CCA0AD007D400D /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75606B624CCA0AD007D400D /* FinalViewController.swift */; };
 		D7BA417A24CBE99800D90314 /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA417924CBE99800D90314 /* userInfo.swift */; };
@@ -61,17 +61,17 @@
 		D729047624D023BE006A1A7B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		D729047724D023BE006A1A7B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		D729047824D023BE006A1A7B /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		D729047E24D02417006A1A7B /* GoAbroadDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoAbroadDataBase.db; sourceTree = "<group>"; };
 		D72904E624D07DE2006A1A7B /* FaqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		D729050824D16E93006A1A7B /* UserOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
 		D729050A24D1756A006A1A7B /* UserOrderDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrderDAO.swift; sourceTree = "<group>"; };
-		D729050C24D19C23006A1A7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOrderListViewController.swift; sourceTree = "<group>"; };
 		D72986B324CD9FA200454E06 /* CheckMyOrderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMyOrderListTableViewController.swift; sourceTree = "<group>"; };
 		D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailViewController.swift; sourceTree = "<group>"; };
 		D72E421424D1BDED0049F4F6 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageTwoViewController.swift; sourceTree = "<group>"; };
+		D72E421A24D29FD50049F4F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D72E421E24D407490049F4F6 /* GoAbroadDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoAbroadDataBase.db; sourceTree = "<group>"; };
 		D75606B424CC8F15007D400D /* BookFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFourViewController.swift; sourceTree = "<group>"; };
 		D75606B624CCA0AD007D400D /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		D7BA417924CBE99800D90314 /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		D729046324D007CF006A1A7B /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				D729047E24D02417006A1A7B /* GoAbroadDataBase.db */,
+				D72E421E24D407490049F4F6 /* GoAbroadDataBase.db */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -184,12 +184,12 @@
 				D729046C24D0235E006A1A7B /* fmdb */,
 				D7F8207524CB340C00FCB1A5 /* AppDelegate.swift */,
 				D7F8207724CB340C00FCB1A5 /* SceneDelegate.swift */,
+				D72E421A24D29FD50049F4F6 /* GoogleService-Info.plist */,
 				D7BA417924CBE99800D90314 /* userInfo.swift */,
 				D7F8207E24CB340E00FCB1A5 /* Assets.xcassets */,
 				D7F8208024CB340E00FCB1A5 /* LaunchScreen.storyboard */,
 				D72986AF24CD730600454E06 /* CheckOrderListViewController.swift */,
 				D7F8208324CB340E00FCB1A5 /* Info.plist */,
-				D729050C24D19C23006A1A7B /* GoogleService-Info.plist */,
 			);
 			path = GoAbroad;
 			sourceTree = "<group>";
@@ -287,9 +287,9 @@
 			files = (
 				D7F8208224CB340E00FCB1A5 /* LaunchScreen.storyboard in Resources */,
 				D7F8207F24CB340E00FCB1A5 /* Assets.xcassets in Resources */,
-				D729050D24D19C23006A1A7B /* GoogleService-Info.plist in Resources */,
+				D72E421B24D29FD50049F4F6 /* GoogleService-Info.plist in Resources */,
+				D72E421F24D407490049F4F6 /* GoAbroadDataBase.db in Resources */,
 				D7F8207D24CB340C00FCB1A5 /* Main.storyboard in Resources */,
-				D729047F24D02417006A1A7B /* GoAbroadDataBase.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

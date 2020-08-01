@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-         cleanBarShadow()
+        cleanBarShadow()
+        print("page1")
     }
 
     @IBAction func mailto(_ sender: UIButton) {
