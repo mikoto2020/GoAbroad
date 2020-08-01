@@ -103,3 +103,4 @@ extension FinalViewController {
             //print(dao.getAllContacts().count)
     }
 }
+

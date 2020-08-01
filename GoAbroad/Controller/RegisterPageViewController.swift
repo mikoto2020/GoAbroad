@@ -46,12 +46,14 @@ extension RegisterPageViewController {
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
             } else {
-                self.performSegue(withIdentifier: "registerToRegisterInfo", sender: self)
                 userMail = self.regisMailTxtField.text!
+                userPass = self.regisPassTxtField.text!
                 UserDefaults.standard.set(userMail, forKey: "userMail")
+                UserDefaults.standard.set(userPass, forKey: "userPass")
                 //註冊成功後，先在firebase中加入沒有訂單的判斷
                 let db = Firestore.firestore()
                 db.collection("GoAbroad").document(self.regisMailTxtField.text!).setData(["hasOrder" : false])
+                self.performSegue(withIdentifier: "registerToRegisterInfo", sender: self)
             }
         }
     }

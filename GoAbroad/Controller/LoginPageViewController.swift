@@ -66,15 +66,16 @@ extension LoginPageViewController {
     func autoLogin() {
         if let tt = UserDefaults.standard.object(forKey: "userPass") as? String {
             userPass = tt
+            loginPassTxtField.text = userPass
         }
         if let tt = UserDefaults.standard.object(forKey: "userMail") as? String {
             userMail = tt
-        }
-        if userMail != "" {
-            sleep(1)
             loginIdTxtField.text = userMail
-            loginPassTxtField.text = userPass
-            login()
+        }
+        if userPass != "" {
+            sleep(1)
+            self.performSegue(withIdentifier: "loginToTopPage", sender: self)
+            //login()
         }
     }
     
