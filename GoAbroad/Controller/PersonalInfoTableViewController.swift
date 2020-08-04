@@ -47,12 +47,10 @@ class PersonalInfoTableViewController: UITableViewController {
 
 extension PersonalInfoTableViewController {
     func gotoLoginPage() {
-        do {
-            UserDefaults.standard.removeObject(forKey: "userPass")
-            try Auth.auth().signOut()
-            self.performSegue(withIdentifier: "toLoginPage", sender: self)
-        } catch {
-            print("登出失敗")
-        }
+        UserDefaults.standard.removeObject(forKey: "userPass")
+        UserDefaults.standard.removeObject(forKey: "userMail")
+        userPass = ""
+        userMail = ""
+        self.navigationController?.popViewController(animated: true)
     }
 }

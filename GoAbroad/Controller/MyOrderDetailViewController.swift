@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+import FirebaseDatabase
 
 class MyOrderDetailViewController: UIViewController {
     @IBOutlet weak var showOrderView: UIView!
@@ -16,32 +18,43 @@ class MyOrderDetailViewController: UIViewController {
     @IBOutlet weak var cityShowLabel: UILabel!
     @IBOutlet weak var addressShowLabel: UILabel!
     @IBOutlet weak var airportShowLabel: UILabel!
+    @IBOutlet weak var terminalLabel: UILabel!
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let tt = UserDefaults.standard.object(forKey: "userTel") as? String {
-            userTel = tt
-        }
         self.showOrderView.isHidden = true
-        print(hasOrder)
-        getOrder()
+        getOrderFromFirebase()
+        
+
+        //從Firebase撈取document中的特定值（是否有訂單的判斷）
+//        let docRef = db.collection("GoAbroad").document(userMail)
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let property = document.get("hasOrder") as! Bool
+//                print("TEST: \(property)")
+//                hasOrder = property
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+//        if hasOrder == true{
+//        getOrderFromFirebase()
+//        }else{
+//           print("NO Order!")
+//        }
     }
 }
 
 extension MyOrderDetailViewController {
-    func getOrder() {
-        print(hasOrder)
-        //判斷是否有訂單
-        if hasOrder == false {
-            print("NO!")
-        } else {
+    func getOrderFromFirebase() {
+
             db.collection("GoAbroad").document(userMail).collection("order").order(by: "orderBoardDate", descending: true).getDocuments{ (querySnapshot, error) in
                 
                 if let querySnapshot = querySnapshot {
                     
                     print("拿firebase的訂單")
-                    print(querySnapshot.documents[0].data())
+                    print("data: \(querySnapshot.documents[0].data())")
                     
                     let orderBoardDate = querySnapshot.documents[0].data()["orderBoardDate"] as? String
                     let orderBoardTime = querySnapshot.documents[0].data()["orderBoardTime"] as? String
@@ -55,9 +68,9 @@ extension MyOrderDetailViewController {
                     self.showSetOffTimeLabel.text = orderBoardTime
                     self.cityShowLabel.text = orderUserCity! + orderUserDist!
                     self.addressShowLabel.text = orderDetailAddr
-                    self.airportShowLabel.text = orderUserAirport! + orderTerminalNum!
+                    self.airportShowLabel.text = orderUserAirport!
+                    self.terminalLabel.text = orderTerminalNum!
                     self.showOrderView.isHidden = false
-                }
             }
         }
     }

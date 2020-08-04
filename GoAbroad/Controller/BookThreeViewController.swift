@@ -57,6 +57,7 @@ extension BookThreeViewController {
     }
 }
 
+//MARK: - 計算總人數、總金額
 extension BookThreeViewController {
     func totalPrice() {
         let personNum = Int(totalPersonLabel.text ?? "0") ?? 0

@@ -11,6 +11,9 @@ import MessageUI
 
 class ViewController: UIViewController {
     
+    @IBAction func reserveBtn(_ sender: UIButton) {
+        tapReserveBtn()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -31,6 +34,19 @@ extension ViewController {
         let image = UIImage()
         navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         navigationController?.navigationBar.shadowImage = image
+    }
+}
+
+extension ViewController {
+    func tapReserveBtn() {
+        //點選訂車時，判斷用戶是否已登入
+        if hasLogin == true {
+            //已登入，進入訂車流程
+            self.performSegue(withIdentifier: "goToReserve", sender: self)
+        } else {
+            //未登入，頁面跳轉至登入頁面
+            self.performSegue(withIdentifier: "goToLogin", sender: self)
+        }
     }
 }
 

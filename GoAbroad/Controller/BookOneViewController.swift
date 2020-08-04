@@ -42,6 +42,7 @@ class BookOneViewController: UIViewController, UITextFieldDelegate, UIPickerView
         super.viewDidLoad()
         setupSubviews()
         initData()
+        //LoginPageViewController().login()
     }
 }
 
@@ -60,8 +61,6 @@ extension BookOneViewController {
         airportPickerView.delegate = self
         addressTxtField.delegate = self
     }
-
-
 }
 
 //MARK: - keyboard

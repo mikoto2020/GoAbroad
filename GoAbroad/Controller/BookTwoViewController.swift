@@ -44,6 +44,7 @@ extension BookTwoViewController {
     }
 }
 
+//MARK: - Actionsheet Date picker
 extension BookTwoViewController {
     func tapAction() {
         let TapDate: UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(pressedDateLabel)) // 加入觸發條件
@@ -62,17 +63,17 @@ extension BookTwoViewController {
         dateAndTimepicker.minimumDate = Date() + 86400 * 3
         //設定60天內
         dateAndTimepicker.maximumDate = Date() + 86400 * 60
-        //加入日期選擇器
+        //AlertController中加入日期選擇器
         alert.view.addSubview(self.dateAndTimepicker)
         //日期格式化
         let dateformat = DateFormatter()
         dateformat.dateFormat = "yyyy-MM-dd"
         //加入AlertController按鈕
-        let ok = UIAlertAction(title: "確定", style: .default){(action)in
+        let ok = UIAlertAction(title: "確定", style: .default) {(action)in
             let result = dateformat.string(from: self.dateAndTimepicker.date)
             self.showSelectedDate.text = result //將用戶選擇結果輸入至label
         }
-        //點取消畫面跳回點擊選擇日期
+        //點取消，畫面跳回點擊選擇日期
         let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in
             self.showSelectedDate.text = "點擊選擇日期"
         }
@@ -87,26 +88,25 @@ extension BookTwoViewController {
         dateAndTimepicker.frame = CGRect(x: 0, y: 0,width: 414, height: 180)
         dateAndTimepicker.datePickerMode = .time
         dateAndTimepicker.locale = Locale(identifier:"zh_TW")
-        //加入時間選擇器
+        //AlertController中加入時間選擇器
         alert.view.addSubview(self.dateAndTimepicker)
-        //日期格式化
+        //時間格式化
         let dateformat = DateFormatter()
         dateformat.dateFormat = "a hh:mm"
         dateformat.amSymbol = "上午"
         dateformat.pmSymbol = "下午"
         //加入AlertController按鈕
-        let ok = UIAlertAction(title: "確定", style: .default){(action)in
-
+        let ok = UIAlertAction(title: "確定", style: .default) {(action) in
             let result = dateformat.string(from: self.dateAndTimepicker.date)
             self.showSelectedTime.text = result   //將用戶選擇結果輸入至label
         }
         //點取消畫面跳回點擊選擇時間
-        let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in self.showSelectedTime.text = "點擊選擇時間"}
+        let cancel = UIAlertAction(title: "取消", style: .destructive) {(action) in
+            self.showSelectedTime.text = "點擊選擇時間"}
         alert.addAction(ok)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
     }
-
 }
 
 //MARK: - PickerView DataSource

@@ -41,3 +41,5 @@ var userPass = ""
 // hasOrder
 var hasOrder = false
 
+// hasLogin
+var hasLogin = false

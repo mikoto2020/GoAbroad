@@ -25,7 +25,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
         loginPassTxtField.delegate = self
         loginIdTxtField.delegate = self
         
@@ -58,7 +58,8 @@ extension LoginPageViewController {
             } else {
                 UserDefaults.standard.set(self.loginIdTxtField.text!, forKey: "userMail")
                 UserDefaults.standard.set(self.loginPassTxtField.text!, forKey: "userPass")
-                self.performSegue(withIdentifier: "loginToTopPage", sender: self)
+                hasLogin = true
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }
@@ -72,16 +73,12 @@ extension LoginPageViewController {
             userMail = tt
             loginIdTxtField.text = userMail
         }
-        if userPass != "" {
-            sleep(1)
-            self.performSegue(withIdentifier: "loginToTopPage", sender: self)
-            //login()
-        }
+//        if userPass != "" {
+//            login()
+//        }
     }
     
     func toRegister() {
         self.performSegue(withIdentifier: "goToRegister", sender: self)
     }
 }
-
-

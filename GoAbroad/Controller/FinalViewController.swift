@@ -25,7 +25,7 @@ class FinalViewController: UIViewController {
         confirmLabel.text = "訂單正在確認中"
         waitingIndicator.startAnimating()
         confirmDetailLabel.text = ""
-        //sendToFirebase()
+        sendToFirebase()
         //saveToUserDefaults()
         saveToSQLdb()
         
@@ -99,8 +99,7 @@ extension FinalViewController {
     func saveToSQLdb() {
         let dao = UserOrderDAO.shared
         let data = UserOrder()
-            dao.insert(data: data)
-            //print(dao.getAllContacts().count)
+        dao.insert(data: data)
     }
 }
 

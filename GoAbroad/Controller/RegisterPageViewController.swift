@@ -46,6 +46,7 @@ extension RegisterPageViewController {
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
             } else {
+                hasLogin = true
                 userMail = self.regisMailTxtField.text!
                 userPass = self.regisPassTxtField.text!
                 UserDefaults.standard.set(userMail, forKey: "userMail")

@@ -10,7 +10,6 @@
 		8E690A8382CC163745FF5BAA /* Pods_GoAbroad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB317B443C30DD9E2EC3888 /* Pods_GoAbroad.framework */; };
 		D729044524CE6B94006A1A7B /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */; };
 		D729044724CE72D2006A1A7B /* PersonalInfoEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */; };
-		D729044924CEBAF4006A1A7B /* HistoryOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */; };
 		D729046924D01C8C006A1A7B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D729046824D01C7D006A1A7B /* libsqlite3.tbd */; };
 		D729047924D023BE006A1A7B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D729047024D023BE006A1A7B /* FMDatabaseQueue.m */; };
 		D729047A24D023BE006A1A7B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D729047124D023BE006A1A7B /* FMDatabaseAdditions.m */; };
@@ -27,7 +26,9 @@
 		D72E421724D1BE070049F4F6 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */; };
 		D72E421924D1D7470049F4F6 /* RegisterPageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */; };
 		D72E421B24D29FD50049F4F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D72E421A24D29FD50049F4F6 /* GoogleService-Info.plist */; };
-		D72E421F24D407490049F4F6 /* GoAbroadDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = D72E421E24D407490049F4F6 /* GoAbroadDataBase.db */; };
+		D74747E124D71DAC00354CF8 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74747E024D71DAC00354CF8 /* HistoryViewController.swift */; };
+		D74747E724D93CC800354CF8 /* HistoryOrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74747E624D93CC800354CF8 /* HistoryOrderDetailTableViewCell.swift */; };
+		D74747E924D93F6500354CF8 /* GoAbroadDataBase.db in Resources */ = {isa = PBXBuildFile; fileRef = D74747E824D93F6500354CF8 /* GoAbroadDataBase.db */; };
 		D75606B524CC8F15007D400D /* BookFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75606B424CC8F15007D400D /* BookFourViewController.swift */; };
 		D75606B724CCA0AD007D400D /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75606B624CCA0AD007D400D /* FinalViewController.swift */; };
 		D7BA417A24CBE99800D90314 /* userInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA417924CBE99800D90314 /* userInfo.swift */; };
@@ -47,7 +48,6 @@
 		CBDC0F81E13AB0B7AE1F4DE2 /* Pods-GoAbroad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoAbroad.release.xcconfig"; path = "Target Support Files/Pods-GoAbroad/Pods-GoAbroad.release.xcconfig"; sourceTree = "<group>"; };
 		D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
 		D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoEditViewController.swift; sourceTree = "<group>"; };
-		D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderTableViewController.swift; sourceTree = "<group>"; };
 		D729046824D01C7D006A1A7B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D729046D24D023BD006A1A7B /* GoAbroad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoAbroad-Bridging-Header.h"; sourceTree = "<group>"; };
 		D729046E24D023BE006A1A7B /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
@@ -71,7 +71,9 @@
 		D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageTwoViewController.swift; sourceTree = "<group>"; };
 		D72E421A24D29FD50049F4F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D72E421E24D407490049F4F6 /* GoAbroadDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoAbroadDataBase.db; sourceTree = "<group>"; };
+		D74747E024D71DAC00354CF8 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D74747E624D93CC800354CF8 /* HistoryOrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D74747E824D93F6500354CF8 /* GoAbroadDataBase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GoAbroadDataBase.db; sourceTree = "<group>"; };
 		D75606B424CC8F15007D400D /* BookFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFourViewController.swift; sourceTree = "<group>"; };
 		D75606B624CCA0AD007D400D /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		D7BA417924CBE99800D90314 /* userInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfo.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		D729046324D007CF006A1A7B /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				D72E421E24D407490049F4F6 /* GoAbroadDataBase.db */,
+				D74747E824D93F6500354CF8 /* GoAbroadDataBase.db */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -215,11 +217,12 @@
 				D72986B524CDA00600454E06 /* MyOrderDetailViewController.swift */,
 				D729044424CE6B94006A1A7B /* PersonalInfoTableViewController.swift */,
 				D729044624CE72D2006A1A7B /* PersonalInfoEditViewController.swift */,
-				D729044824CEBAF4006A1A7B /* HistoryOrderTableViewController.swift */,
+				D74747E024D71DAC00354CF8 /* HistoryViewController.swift */,
 				D72904E624D07DE2006A1A7B /* FaqViewController.swift */,
 				D72E421624D1BE070049F4F6 /* LoginPageViewController.swift */,
 				D72E421424D1BDED0049F4F6 /* RegisterPageViewController.swift */,
 				D72E421824D1D7470049F4F6 /* RegisterPageTwoViewController.swift */,
+				D74747E624D93CC800354CF8 /* HistoryOrderDetailTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,7 +291,7 @@
 				D7F8208224CB340E00FCB1A5 /* LaunchScreen.storyboard in Resources */,
 				D7F8207F24CB340E00FCB1A5 /* Assets.xcassets in Resources */,
 				D72E421B24D29FD50049F4F6 /* GoogleService-Info.plist in Resources */,
-				D72E421F24D407490049F4F6 /* GoAbroadDataBase.db in Resources */,
+				D74747E924D93F6500354CF8 /* GoAbroadDataBase.db in Resources */,
 				D7F8207D24CB340C00FCB1A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,16 +353,17 @@
 				D7F8207624CB340C00FCB1A5 /* AppDelegate.swift in Sources */,
 				D729047A24D023BE006A1A7B /* FMDatabaseAdditions.m in Sources */,
 				D729044524CE6B94006A1A7B /* PersonalInfoTableViewController.swift in Sources */,
+				D74747E724D93CC800354CF8 /* HistoryOrderDetailTableViewCell.swift in Sources */,
 				D72E421724D1BE070049F4F6 /* LoginPageViewController.swift in Sources */,
 				D7F8209024CB4D7600FCB1A5 /* BookTwoViewController.swift in Sources */,
 				D72E421524D1BDED0049F4F6 /* RegisterPageViewController.swift in Sources */,
 				D7F8208C24CB38C400FCB1A5 /* BookOneViewController.swift in Sources */,
-				D729044924CEBAF4006A1A7B /* HistoryOrderTableViewController.swift in Sources */,
 				D729050924D16E93006A1A7B /* UserOrder.swift in Sources */,
 				D72986B624CDA00600454E06 /* MyOrderDetailViewController.swift in Sources */,
 				D729047924D023BE006A1A7B /* FMDatabaseQueue.m in Sources */,
 				D729044724CE72D2006A1A7B /* PersonalInfoEditViewController.swift in Sources */,
 				D729050B24D1756A006A1A7B /* UserOrderDAO.swift in Sources */,
+				D74747E124D71DAC00354CF8 /* HistoryViewController.swift in Sources */,
 				D729047D24D023BE006A1A7B /* FMResultSet.m in Sources */,
 				D75606B524CC8F15007D400D /* BookFourViewController.swift in Sources */,
 				D72986B424CD9FA200454E06 /* CheckMyOrderListTableViewController.swift in Sources */,
