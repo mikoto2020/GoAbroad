@@ -53,13 +53,13 @@ class FaqViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath)
             cell.textLabel?.text = tableViewData[indexPath.section].sectionTitle
-            cell.textLabel?.numberOfLines=0
+            cell.textLabel?.numberOfLines = 0
             cell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping // label內文字自動換行
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "item", for: indexPath)
             cell.textLabel?.text = tableViewData[indexPath.section].sectionData[indexPath.row - 1]
-            cell.textLabel?.numberOfLines=0
+            cell.textLabel?.numberOfLines = 0
             cell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
             return cell
         }

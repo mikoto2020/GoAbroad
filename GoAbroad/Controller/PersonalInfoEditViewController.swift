@@ -17,7 +17,7 @@ class PersonalInfoEditViewController: UIViewController, UITextFieldDelegate {
     //Action
 
     @IBAction func submitEditBtn(_ sender: UIBarButtonItem) {
-        subminBtnAction()
+        submitBtnAction()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ extension PersonalInfoEditViewController: UITextViewDelegate {
 
 //MARK: - 資料送出時的錯誤判斷
 extension PersonalInfoEditViewController {
-    func subminBtnAction() {
+    func submitBtnAction() {
         //檢查欄位是否有留空
         if nameInputTxtField.text == "" || phoneNumInputTxtField.text == "" {
             let alert = UIAlertController(title: "欄位不得為空", message: nil, preferredStyle: .alert)

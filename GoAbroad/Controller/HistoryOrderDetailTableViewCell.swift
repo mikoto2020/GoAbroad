@@ -9,7 +9,8 @@
 import UIKit
 
 class HistoryOrderDetailTableViewCell: UITableViewCell {
-
+    
+    //Custom TableView
     @IBOutlet weak var goOrBackDateTimeLabel: UILabel!
     @IBOutlet weak var showFromLabel: UILabel!
     @IBOutlet weak var showToLabel: UILabel!
@@ -22,8 +23,6 @@ class HistoryOrderDetailTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

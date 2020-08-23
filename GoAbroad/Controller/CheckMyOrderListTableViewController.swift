@@ -25,6 +25,13 @@ class CheckMyOrderListTableViewController: UITableViewController {
         print("\(NSHomeDirectory())/Documents/database.db")
         tapComingLabel()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if hasLogin == true {
+            checkHasOrder()
+            print("aaa:\(hasOrder)")
+        }
+    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,6 +45,7 @@ class CheckMyOrderListTableViewController: UITableViewController {
     func checkOrder() {
         if userMail == "" {
             print("no userMail")
+            print("信箱：\(userMail)")
             return
         }
         print(userMail)
@@ -56,27 +64,33 @@ extension CheckMyOrderListTableViewController {
     }
     
     @objc func pressedComingLabel(){
+        //先判斷用戶是否已經登入
         if hasLogin == false {
-             let alert = UIAlertController(title: "請先登入", message: nil, preferredStyle: .alert)
-             let ok = UIAlertAction(title: "確定", style: .default) { (action) in
+            //沒有登入
+            print("是否登入：\(hasLogin)")
+            let alert = UIAlertController(title: "請先登入", message: nil, preferredStyle: .alert)
+            let ok = UIAlertAction(title: "確定", style: .default) { (action) in
                 self.performSegue(withIdentifier: "orderToLoginPage", sender: self)
-             }
-             let cancel = UIAlertAction(title: "取消", style: .destructive, handler: nil)
-             alert.addAction(ok)
-             alert.addAction(cancel)
-             present(alert, animated: true, completion: nil)
+            }
+            let cancel = UIAlertAction(title: "取消", style: .destructive, handler: nil)
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            present(alert, animated: true, completion: nil)
         } else {
-            checkHasOrder()
-            
+            //有登入
+            print("是否登入：\(hasLogin)")
+            print("有訂單嗎？：\(hasOrder)")
             if hasOrder == true{
+                print("has order!")
+                print("訂單狀態：\(hasOrder)")
                 self.performSegue(withIdentifier: "toDetail", sender: self)
             } else {
-                print("NO ORDER")
+                let alert = UIAlertController(title: "目前沒有訂單喔！", message: nil, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "確定", style: .default, handler: nil)
+                alert.addAction(ok)
+                present(alert, animated: true, completion: nil)
             }
-            
-            
         }
- 
     }
     
     func checkHasOrder() {
@@ -84,8 +98,8 @@ extension CheckMyOrderListTableViewController {
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let property = document.get("hasOrder") as! Bool
-                print("TEST: \(property)")
                 hasOrder = property
+                print("TEST: \(property)")
             } else {
                 print("Document does not exist")
             }

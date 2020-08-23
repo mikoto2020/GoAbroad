@@ -39,12 +39,15 @@ class BookFourViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if let userName = UserDefaults.standard.object(forKey: "userName") as? String {
             userNameLabel.text = userName
+            print("姓名：\(userName)")
         }
         if let userTel = UserDefaults.standard.object(forKey: "userTel") as? String {
             userTelLabel.text = userTel
+            print("電話：\(userTel)")
         }
         if let userMail = UserDefaults.standard.object(forKey: "userMail") as? String {
             userMailLabel.text = userMail
+            print("信箱：\(userMail)")
         }
     }
 }

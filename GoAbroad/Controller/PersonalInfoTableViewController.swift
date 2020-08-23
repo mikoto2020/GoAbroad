@@ -14,9 +14,6 @@ class PersonalInfoTableViewController: UITableViewController {
     @IBOutlet weak var personalName: UILabel!
     @IBOutlet weak var personalPhoneNum: UILabel!
     @IBOutlet weak var personalMail: UILabel!
-    @IBAction func toLoginPage(_ sender: UIButton) {
-        gotoLoginPage()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +39,5 @@ class PersonalInfoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
-    }
-}
-
-extension PersonalInfoTableViewController {
-    func gotoLoginPage() {
-        UserDefaults.standard.removeObject(forKey: "userPass")
-        UserDefaults.standard.removeObject(forKey: "userMail")
-        userPass = ""
-        userMail = ""
-        self.navigationController?.popViewController(animated: true)
     }
 }

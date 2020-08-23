@@ -43,3 +43,6 @@ var hasOrder = false
 
 // hasLogin
 var hasLogin = false
+
+
+var idx = 0

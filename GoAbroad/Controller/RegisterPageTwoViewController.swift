@@ -38,17 +38,21 @@ extension RegisterPageTwoViewController: UITextViewDelegate {
 
 extension RegisterPageTwoViewController {
     func toTopPage() {
+        //判斷是否有輸入資料
         if registerNameTxtField.text == "" || registerPhoneTxtField.text == "" {
             let alert = UIAlertController(title: "還有欄位沒填完", message: nil, preferredStyle: .alert)
             let ok = UIAlertAction(title: "確定", style: .default, handler: nil)
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
         } else {
-            self.performSegue(withIdentifier: "toTopPage", sender: self)
+            //將用戶輸入資料賦值到全域變數
             userName = self.registerNameTxtField.text!
-            UserDefaults.standard.set(userName, forKey: "userName")
             userTel = self.registerPhoneTxtField.text!
+            //儲存至UserDefault
+            UserDefaults.standard.set(userName, forKey: "userName")
             UserDefaults.standard.set(userTel, forKey: "userTel")
+            //跳頁
+            self.performSegue(withIdentifier: "toTopPage", sender: self)
         }
     }
 }

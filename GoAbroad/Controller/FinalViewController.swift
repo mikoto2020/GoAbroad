@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseCore
 
 class FinalViewController: UIViewController {
     //UI

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseCore
 
 class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     //UI
@@ -41,19 +42,24 @@ extension RegisterPageViewController {
     func checkRegister() {
         Auth.auth().createUser(withEmail: regisMailTxtField.text!, password: regisPassTxtField.text!) { (user, error) in
             if error != nil {
+                //註冊失敗
                 let alert = UIAlertController(title: "註冊失敗", message: error?.localizedDescription, preferredStyle: .alert)
                 let ok = UIAlertAction(title: "確定", style: .default, handler: nil)
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
             } else {
+                //註冊成功
                 hasLogin = true
+                //將用戶輸入資料賦值到全域變數
                 userMail = self.regisMailTxtField.text!
                 userPass = self.regisPassTxtField.text!
+                //儲存至UserDefault
                 UserDefaults.standard.set(userMail, forKey: "userMail")
                 UserDefaults.standard.set(userPass, forKey: "userPass")
-                //註冊成功後，先在firebase中加入沒有訂單的判斷
+                //註冊成功後，在firebase中加入沒有訂單的判斷
                 let db = Firestore.firestore()
                 db.collection("GoAbroad").document(self.regisMailTxtField.text!).setData(["hasOrder" : false])
+                //跳至下一頁
                 self.performSegue(withIdentifier: "registerToRegisterInfo", sender: self)
             }
         }

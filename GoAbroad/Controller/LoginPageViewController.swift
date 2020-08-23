@@ -25,10 +25,8 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.navigationBar.isHidden = true
         loginPassTxtField.delegate = self
         loginIdTxtField.delegate = self
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         loading.startAnimating()
@@ -56,15 +54,19 @@ extension LoginPageViewController {
                 alert.addAction(ok)
                 self.present(alert, animated: true, completion: nil)
             } else {
+                idx = 1
                 UserDefaults.standard.set(self.loginIdTxtField.text!, forKey: "userMail")
                 UserDefaults.standard.set(self.loginPassTxtField.text!, forKey: "userPass")
                 hasLogin = true
+                userMail = self.loginIdTxtField.text!
+                userPass = self.loginPassTxtField.text!
                 self.navigationController?.popViewController(animated: true)
             }
         }
     }
     
     func autoLogin() {
+        //預填登入資料
         if let tt = UserDefaults.standard.object(forKey: "userPass") as? String {
             userPass = tt
             loginPassTxtField.text = userPass
@@ -73,9 +75,6 @@ extension LoginPageViewController {
             userMail = tt
             loginIdTxtField.text = userMail
         }
-//        if userPass != "" {
-//            login()
-//        }
     }
     
     func toRegister() {

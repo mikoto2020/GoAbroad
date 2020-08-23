@@ -55,7 +55,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
     func sendEmail() {
         let emailTitle = "意見回饋"
         let messageBody = "感謝您的寶貴意見，我們將會於三至五個工作天內回覆您。"
-        let recipient = ["itnob@gmail.com"]
+        let recipient = ["aaa@aaa.com"]
         
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
@@ -80,7 +80,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
 //MARK: - Phone call
 extension ViewController {
     func makeAPhoneCall() {
-        let phoneNumber = "0908028009"
+        let phoneNumber = "0908123456"
         if let phoneCallURL = URL(string: "tel:\(phoneNumber)") {
             let app = UIApplication.shared
             if (app.canOpenURL(phoneCallURL)) {
